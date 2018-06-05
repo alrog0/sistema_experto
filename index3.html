@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Sistema Experto - Diagnostico Trastornos del Sueño</title>
+	<link  rel = "stylesheet" href = "css/estilos.css" />
+</head>
+<body>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #888888;
+    text-align: left;
+    padding: 9px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<script>
+ function Validar(e) {
+	 var s1 = document.getElementById('s1').checked;
+	 var s2 = document.getElementById('s2').checked;
+	 var s3 = document.getElementById('s3').checked;
+	 var s4 = document.getElementById('s4').checked;
+	 var s5 = document.getElementById('s5').checked;
+	 var s6 = document.getElementById('s6').checked;
+	 var s7 = document.getElementById('s7').checked;
+	 var s8 = document.getElementById('s8').checked;
+	 var s9 = document.getElementById('s9').checked;
+	 var s10 = document.getElementById('s10').checked;
+	 var s11 = document.getElementById('s11').checked;
+	 var s12 = document.getElementById('s12').checked;
+	 var s13 = document.getElementById('s13').checked;
+	 var s14 = document.getElementById('s14').checked;
+	 var s15 = document.getElementById('s15').checked;
+	 var s16 = document.getElementById('s16').checked;
+	 var s17 = document.getElementById('s17').checked;
+	 var s18 = document.getElementById('s18').checked;
+	 var s19 = document.getElementById('s19').checked;
+	 var s20 = document.getElementById('s20').checked;
+	 var s21 = document.getElementById('s21').checked;
+	 var s22 = document.getElementById('s22').checked;
+	 var s23 = document.getElementById('s23').checked;
+	 var s24 = document.getElementById('s24').checked;
+	 var s25 = document.getElementById('s25').checked;
+	 var s26 = document.getElementById('s26').checked;
+	 var s27 = document.getElementById('s27').checked;
+	 
+	 var contador = 0;
+	 if (s1==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s2==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s3==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s4==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s5==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s6==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s7==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s8==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s9==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s10==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s11==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s12==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s13==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s14==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s15==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s16==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s17==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s18==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s19==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s20==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s21==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s22==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s23==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s24==true) {
+		contador = contador+1;
+	}else{
+	}
+	
+	if (s25==true) {
+		contador = contador+1;
+	}else{
+	}
+	if (s26==true) {
+		contador = contador+1;
+	}
+	else{
+		}
+	if (s27==true) {
+		contador = contador+1;
+	}
+	else{
+		}
+
+//	alert(contador);
+	
+//	if(contador<=3){	
+//		alert("contador: "+contador);
+//		return (false);
+//		window.location = "index3.html";
+//	}
+
+	if (contador<4){
+			alert ('debes seleccionar al menos cuatro sintomas...!!!!!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	
+ }
+</script>
+
+<!--<script>
+function validate(e) {		
+		var formulario = document.form;
+		var contador = 0;
+		for (var i = 0; i < 27; i++) {
+			if (formulario.s1[1].checked) {
+				contador = contador+1;
+//				alert ("contador: "+contador);
+			}
+		}
+
+		if (contador<1){
+			alert ('debes seleccionar al menos cuatro sintomas...!!!!!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	}
+</script>-->
+<!--<form name="form" action="php/conexion.php" method="post" onsubmit="validate(event, this);">-->
+<form name="form3" action="php/conexion.php" method="post" onsubmit="Validar(event, this);">
+	<h2>Sistema Experto Para el Diagnostico de Trastornos del sueño</h2>
+	<h2>Seleccione los sintomas que presenta:</h2>
+	<table id="tbl" border="1">
+	<tr>
+
+		<td>
+			<input type="checkbox" id="s1" name="s1" value="s1">1. Dificultad para conciliar el sueño por la noche<br>
+		</td>                            
+                                         
+		<td>                             
+			<input type="checkbox" id="s2" name="s2" value="s2" >2. Despertarse durante la noche y/o muy temprano<br>
+		</td>                            
+                                         
+		<td>                             
+			<input type="checkbox" id="s3" name="s3" value="s3">3. No sentirse bien descansado después del sueño nocturno<br>
+		</td>                            
+</tr>                                    
+<tr>                                     
+		<td>                             
+			<input type="checkbox" id="s4" name="s4" value="s4" >4. Cambios de humor (Irritabilidad, depresión o ansiedad)<br>
+		</td>                            
+                                         
+		<td>                             
+			<input type="checkbox" id="s5" name="s5" value="s5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar<br>
+		</td>                           
+                                         
+		<td>                             
+			<input type="checkbox" id="s6" name="s6" value="s6" >6. Dolor de cabeza<br>
+		</td>
+</tr>
+<tr>
+		<td>
+			<input type="checkbox" id="s7" name="s7" value="s7">7. Dolor de oido<br>
+		</td>                       
+                                    
+		<td>                        
+			<input type="checkbox" id="s8" name="s8" value="s8" >8. Sensibilidad a comidas calientes o frias<br>
+		</td>                       
+                                    
+		<td>                        
+			<input type="checkbox" id="s9" name="s9" value="s9">9. Dolor o inflamación de la mandíbula<br>
+		</td>
+</tr>
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s10" name="s10" value="s10" >10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s11" name="s11" value="s11">11. Roncar<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s12" name="s12" value="s12">12. Disminución de la libido (deseo sexual)<br>
+	</td>	
+
+</tr>
+
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s13" name="s13" value="s13" >13. Tiene el maxilar inferior más corto que el maxilar superior<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s14" name="s14" value="s14">14. Hipertensión arterial<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s15" name="s15" value="s15">15. Interrupción de la respiración durante el sueño<br>
+	</td>	
+
+</tr>
+
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s16" name="s16" value="s16" >16. Despertarse con sensación de asfixia<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s17" name="s17" value="s17">17. Impulso fuerte de dormir<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s18" name="s18" value="s18">18. Alucinaciones<br>
+	</td>	
+
+</tr>
+
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s19" name="s19" value="s19" >19. Parálisis del sueño<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s20" name="s20" value="s20">20. Estado de Embarazo<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s21" name="s21" value="s21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos<br>
+	</td>	
+
+</tr>
+
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s22" name="s22" value="s22" >22. Enfermedad renal crónica<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s23" name="s23" value="s23">23. Diabetes<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s24" name="s24" value="s24">24. Deficiencia de hierro, de magnesio o de ácido fólico<br>
+	</td>	
+
+</tr>
+
+<tr>
+	
+	<td>
+		<input type="checkbox" id="s25" name="s25" value="s25" >25. orinar en repetidas ocasiones en la noche<br>
+	</td>
+
+	<td>
+		<input type="checkbox" id="s26" name="s26" value="s26">26. Se levanta y/o habla dormido<br>
+	</td>
+	
+	<td>
+		<input type="checkbox" id="s27" name="s27" value="s27">27. Terrores nocturnos<br>
+	</td>	
+
+</tr>
+	</table>
+<!--	<br><br><button type="submit" onclick="Validar();">Enviar</button> -->
+	<br><br><button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Sistema Experto - Diagnostico Trastornos del Sueño</title>
+	<link  rel = "stylesheet" href = "css/estilos.css" />
+</head>
+<body>
+<script>
+function Validar(e) {
+    var lista1x = document.getElementById("lista1").selectedIndex;
+    var lista1y = document.getElementById("lista1").options;
+	var lista2x = document.getElementById("lista2").selectedIndex;
+    var lista2y = document.getElementById("lista2").options;
+	var lista3x = document.getElementById("lista3").selectedIndex;
+    var lista3y = document.getElementById("lista3").options;
+	var lista4x = document.getElementById("lista4").selectedIndex;
+    var lista4y = document.getElementById("lista4").options;
+	var lista5x = document.getElementById("lista5").selectedIndex;
+    var lista5y = document.getElementById("lista5").options;
+	var lista6x = document.getElementById("lista6").selectedIndex;
+    var lista6y = document.getElementById("lista6").options;
+    //alert("Index: " + lista1y[lista1x].index + " is " + lista1y[lista1x].text);
+	var indice1 = lista1y[lista1x].index;
+	var indice2 = lista2y[lista2x].index;
+	var indice3 = lista3y[lista3x].index;
+	var indice4 = lista4y[lista4x].index;
+	var indice5 = lista5y[lista5x].index;
+	var indice6 = lista6y[lista6x].index;
+//	console.log("indice1: "+indice1+" indice2: "+indice2+" indice3: "+indice3+" indice4: "+indice4+" indice5: "+indice5+" indice6: "+indice6);
+	if (indice1 == indice2 || indice1 == indice3 || indice1 == indice4 || indice1 == indice5 || indice1 == indice6){
+			alert ('Debe seleccionar sintomas diferentes en cada casilla!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	else if (indice2 == indice3 || indice2 == indice4 || indice2 == indice5 || indice2 == indice6){
+			alert ('Debe seleccionar sintomas diferentes en cada casilla!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	else if (indice3 == indice4 || indice3 == indice5 || indice3 == indice6){
+			alert ('Debe seleccionar sintomas diferentes en cada casilla!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	else if (indice4 == indice5 || indice4 == indice6){
+			alert ('Debe seleccionar un sintoma diferente en cada casilla!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+		
+	else if (indice5 == indice6){
+			alert ('Debe seleccionar un sintoma diferente en cada casilla!');
+			if (e.preventDefault) {
+				e.preventDefault();
+			} else {
+			e.returnValue = false;
+			}
+		}
+	else{
+	
+	}
+}
+</script>
+
+<form action="php/registrarkmbd.php" method="post" onsubmit="Validar(event, this)";>
+
+<button type="button" >Display index</button>
+
+	<h2>Sistema Experto Para el Diagnostico de Trastornos del sueño</h2>
+	<h3>Agregar Conocimiento</h3>
+	<select name="lista1" id="lista1" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option>
+
+	</select><br><br>
+	<select name="lista2" id="lista2" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option>
+	</select><br><br>
+	<select name="lista3" id="lista3" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option>
+	</select><br><br>
+	<select name="lista4" id="lista4" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option>
+	</select><br><br>
+	<select name="lista5" id="lista5" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option> 
+	</select><br><br>
+	<select name="lista6" id="lista6" required>
+	<option value="">Seleccione un sintoma</option>
+	<option value="sintoma1" id="1">1. Dificultad para conciliar el sueño por la noche</option> 
+    <option value="sintoma2" id="2">2. Despertarse durante la noche y/o muy temprano</option> 
+    <option value="sintoma3" id="3">3. No sentirse bien descansado después del sueño nocturno</option>
+    <option value="sintoma4" id="4">4. Cambios de humor (Irritabilidad, depresión o ansiedad)</option> 
+    <option value="sintoma5" id="5">5. Dificultad para prestar atención, concentrarse en las tareas o recordar</option> 
+    <option value="sintoma6" id="6">6. Dolor de cabeza</option>
+	<option value="sintoma7" id="7">7. Dolor de oido</option>
+	<option value="sintoma8" id="8">8. Sensibilidad a comidas calientes o frias</option>
+	<option value="sintoma9" id="9">9. Dolor o inflamación de la mandíbula</option>
+	<option value="sintoma10" id="10">10. Consume sustancias como: alcohol, cafeina, nicotina, sedantes</option>
+	<option value="sintoma11" id="11">11. Roncar</option>
+	<option value="sintoma12" id="12">12. Disminución de la libido (deseo sexual)</option>
+	<option value="sintoma13" id="13">13. Tiene el maxilar inferior más corto que el maxilar superior</option>
+	<option value="sintoma14" id="14">14. Hipertensión arterial</option>
+	<option value="sintoma15" id="15">15. Interrupción de la respiración durante el sueño</option>
+	<option value="sintoma16" id="16">16. Despertarse con sensación de asfixia</option>
+	<option value="sintoma17" id="17">17. Impulso fuerte de dormir</option>
+	<option value="sintoma18" id="18">18. Alucinaciones</option>
+	<option value="sintoma19" id="19">19. Parálisis del sueño</option>
+	<option value="sintoma20" id="20">20. Estado de Embarazo</option>
+	<option value="sintoma21" id="21">21. Sensación de dolor, hormigueo o ardor en las piernas y/o brazos</option>
+	<option value="sintoma22" id="22">22. Enfermedad renal crónica</option>
+	<option value="sintoma23" id="23">23. Diabetes</option>
+	<option value="sintoma24" id="24">24. Deficiencia de hierro, de magnesio o de ácido fólico</option>
+	<option value="sintoma25" id="25">25. orinar en repetidas ocasiones en la noche</option>
+	<option value="sintoma26" id="26">26. Se levanta y/o habla dormido</option>
+	<option value="sintoma27" id="27">27. Terrores nocturnos</option>
+	</select><br><br>
+	
+	<b>Trastorno:</b>
+	<select name="lista7" id="lista7"required>
+	<option value="">Seleccione un trastorno</option>
+	<option value="Insomnio">1. Insomnio</option> 
+    <option value="Apnea obstructiva del sueño">2. Apnea obstructiva del sueño</option> 
+    <option value="Narcolepsia">3. Narcolepsia</option>
+    <option value="Síndrome de piernas inquietas">4. Síndrome de piernas inquietas</option> 
+    <option value="Nicturia">5. Nicturia</option> 
+    <option value="Sonambulismo">6. Sonambulismo</option>
+	<option value="Bruxismo">7. Bruxismo</option>
+	</select><br><br>
+
+    <button class="submit" type="submit">Enviar</button>
+</form>
+</body>
+</html>

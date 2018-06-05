@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Sistema Experto - Diagnostico Trastornos del Sueño</title>
+	<link  rel = "stylesheet" href = "css/estilos.css" />
+</head>
+<script>
+function valida( formulario1 ) {
+
+ var rtasi = document.getElementById('rta1').checked;
+ var rtano = document.getElementById('rta2').checked;
+ 
+ if (rtasi==true) {
+//	  window.location = "http://sise.bgcolnar.xyz/index3.html";
+	  window.location = "index3.html";
+      return (false);
+ }
+ if (rtano==true) {
+	  window.location = "index.html";
+      return (false);
+	 }
+ }
+</script>
+<body>
+<form class="sistemaexperto" method="post" onSubmit="return valida(this);">
+    <ul>
+        <li>
+			 <h2>Sistema Experto Para el Diagnostico de Trastornos del sueño</h2>
+			 <h3>1. ¿Tiene trastornos del sueño?</h3>
+			Si: <input type="radio" name="rta1" id="rta1" value="si" required="required"><br>
+			No: <input type="radio" name="rta1" id="rta2" value="no" required="required">
+			<br><br><button class="submit" type="submit">Siguiente</button>
+		</li>
+        	
+    </ul>
+</form>
+
+<form class="sistemaexperto" action="agregarkm.html" method="post">
+    <br><br>
+	<ul>
+        <li>	
+	<h2>2. Agregar Conocimiento</h2>
+		<br><button class="submit" type="submit">Agregar Conocimiento</button>
+		</li>
+    </ul>
+
+</form>
+</body>
+</html>
